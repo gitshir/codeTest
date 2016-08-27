@@ -9,18 +9,33 @@ var numberArray = "";
 //console.log(enterNumber);
 scanNumbers (enterNumber);
 
+/**
+  * @exports
+  *
+*/
 module.exports = {
-    tenAdd : function ()
+    tenAdds : function (mess)
     {
-        parseNumber(123);
+        console.log('tenAdd ' + mess)
+        scanNumbers(mess);
     }
-}
+};
 
+/**
+  * @function
+  * @param
+  *
+*/
 function convertNum(str)
 {
     return parseInt(str, 10);
 }
 
+/**
+  * @function
+  * @param
+  *
+*/
 var tenArray = [];
 function scanNumbers(enterNumber)
 {
@@ -30,7 +45,11 @@ function scanNumbers(enterNumber)
     }
 }
 
-
+/**
+  * @function
+  * @param
+  *
+*/
 function parseNumber(num)
 {
     numberArray = ("" + num).split("");
@@ -87,6 +106,11 @@ function parseNumber(num)
     }
 }
 
+/**
+  * @function
+  * @param
+  *
+*/
 function addArray(numberArray,  n)
 {
     var num = 0;
@@ -97,6 +121,11 @@ function addArray(numberArray,  n)
     return num;
 }
 
+/**
+  * @function
+  * @param
+  *
+*/
 function sumArray(numberArray, i, n)
 {
 //    console.log(numberArray + "  " + i + "  "+ n);

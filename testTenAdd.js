@@ -3,31 +3,56 @@
 /* Code test */
 /* to run */
 /* K:\imagex\codetest-a4ac4be6\code>node tenAdd.js 191 */
-
-var serverConf= require('.\tenAdd.js');
+/**
+  * @exports
+  *
+*/
+var testcode= require('./tenAdd.js');
 
 var enterNumber  = process.argv[3];
 var enterFunction  = process.argv[2];
 // unit test
 
-switch(process.argv[2])
-{
-    case 0:
-        testSumArray();
-        break;
-    case 1:
-        testAddArray();
-        break
+startTest();
 
+/**
+  * @function
+  * @param
+  *
+*/
+function testSumArray()
+{
+    console.log('testSumArray');
+    testcode.tenAdds(enterNumber);
 }
 
-testSumArray()
+/**
+  * @function
+  * @param
+  *
+*/
+function testAddArray()
 {
-    sumArray(['1','2','3'   ] , 1);
+    console.log('testAddArray');
+    testcode.tenAdds();
 }
 
-
-testAddArray()
+/**
+  * @function
+  * @param
+  *
+*/
+function startTest()
 {
-    addArray(['1','2','3'] , 1 ,3);
+    console.log('start test ' + process.argv[2]);
+    switch(process.argv[2])
+    {
+        case '0':
+            testSumArray();
+            break;
+        case '1':
+            testAddArray();
+            break
+
+    }
 }
